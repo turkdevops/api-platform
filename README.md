@@ -12,25 +12,22 @@ and flexibility:
 * Enjoy the **beautiful automatically generated API documentation** ([Swagger](https://swagger.io/)/[OpenAPI](https://www.openapis.org/)).
 * Add [**a convenient Material Design administration interface**](https://api-platform.com/docs/admin) built with [React](https://reactjs.org/)
   without writing a line of code.
-* **Scaffold fully functional Progressive-Web-Apps and mobile apps** built with [React](https://api-platform.com/docs/client-generator/react),
-[Vue.js](https://api-platform.com/docs/client-generator/vuejs) or [React Native](https://api-platform.com/docs/client-generator/react-native)
-thanks to [the client generator](https://api-platform.com/docs/client-generator) (a Vue.js generator is also available).
+* **Scaffold fully functional Progressive-Web-Apps and mobile apps** built with [Next.js](https://api-platform.com/docs/client-generator/nextjs/) (React),
+[Nuxt.js](https://api-platform.com/docs/client-generator/nuxtjs/) (Vue.js) or [React Native](https://api-platform.com/docs/client-generator/react-native/)
+thanks to [the client generator](https://api-platform.com/docs/client-generator/) (a Vue.js generator is also available).
 * Install a development environment and deploy your project in production using **[Docker](https://api-platform.com/docs/distribution)**
 and [Kubernetes](https://api-platform.com/docs/deployment/kubernetes).
-* Easily add **[JSON Web Token](https://api-platform.com/docs/core/jwt) or [OAuth](https://oauth.net/) authentication**.
-* Create specs and tests with a **developer friendly API testing tool** on top of [Behat](https://behat.org/).
+* Easily add **[OAuth](https://oauth.net/) authentication**.
+* Create specs and tests with **[a developer friendly API testing tool](https://api-platform.com/docs/distribution/testing/)*.
 
 [![GitHub Actions](https://github.com/api-platform/core/workflows/CI/badge.svg)](https://github.com/api-platform/core/actions?workflow=CI)
-[![Travis CI](https://travis-ci.org/api-platform/core.svg?branch=master)](https://travis-ci.org/api-platform/core)
-[![CircleCI](https://circleci.com/gh/api-platform/core/tree/master.svg?style=shield)](https://circleci.com/gh/api-platform/core/tree/master)
-[![AppVeyor](https://ci.appveyor.com/api/projects/status/grwuyprts3wdqx5l/branch/master?svg=true)](https://ci.appveyor.com/project/dunglas/dunglasapibundle/branch/master)
 [![Codecov](https://codecov.io/gh/api-platform/core/branch/master/graph/badge.svg)](https://codecov.io/gh/api-platform/core/branch/master)
 [![SymfonyInsight](https://insight.symfony.com/projects/92d78899-946c-4282-89a3-ac92344f9a93/mini.svg)](https://insight.symfony.com/projects/92d78899-946c-4282-89a3-ac92344f9a93)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/api-platform/core/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/api-platform/core/?branch=master)
 
 The official project documentation is available **[on the API Platform website](https://api-platform.com)**.
 
-API Platform embraces open web standards (OpenAPI, JSON-LD, GraphQL, Hydra, HAL, JSONAPI, JWT, OAuth, HTTP...) and the
+API Platform embraces open web standards (OpenAPI, RDF/JSON-LD/Hydra, GraphQL, JSON:API, HAL, OAuth...) and the
 [Linked Data](https://www.w3.org/standards/semanticweb/data) movement. Your API will automatically expose structured data
 in Schema.org / JSON-LD. It means that your API Platform application is usable **out of the box** with technologies of
 the semantic web.
