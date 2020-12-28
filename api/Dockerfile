@@ -5,7 +5,7 @@
 
 # https://docs.docker.com/engine/reference/builder/#understand-how-arg-and-from-interact
 ARG PHP_VERSION=8.0
-ARG CADDY_VERSION=2
+ARG CADDY_VERSION=2.3.0-rc.1
 
 # "php" stage
 FROM php:${PHP_VERSION}-fpm-alpine AS api_platform_php
@@ -62,11 +62,7 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 RUN ln -s $PHP_INI_DIR/php.ini-production $PHP_INI_DIR/php.ini
 COPY docker/php/conf.d/api-platform.prod.ini $PHP_INI_DIR/conf.d/api-platform.ini
 
-RUN set -eux; \
-	{ \
-		echo '[www]'; \
-		echo 'ping.path = /ping'; \
-	} | tee /usr/local/etc/php-fpm.d/docker-healthcheck.conf
+COPY docker/php/php-fpm.d/zz-docker.conf /usr/local/etc/php-fpm.d/zz-docker.conf
 
 # https://getcomposer.org/doc/03-cli.md#composer-allow-superuser
 ENV COMPOSER_ALLOW_SUPERUSER=1
@@ -126,7 +122,6 @@ FROM caddy:${CADDY_VERSION} AS api_platform_caddy
 
 WORKDIR /srv/api
 
-ENV MERCURE_DEMO="demo /srv/mercure-assets/"
 COPY --from=dunglas/mercure:v0.11 /srv/public /srv/mercure-assets/
 COPY --from=api_platform_caddy_builder /usr/bin/caddy /usr/bin/caddy
 COPY --from=api_platform_php /srv/api/public public/
